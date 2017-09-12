@@ -8,13 +8,37 @@
 
     <%= stylesheet_link_tag    'default', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'default', 'data-turbolinks-track': 'reload' %>
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+
   </head>
 
   <body>
-  <%= link_to "Home" , "/" %>
-  <%= link_to "About" , "/about" %>
+  	<div class="container">
+  		<div class="page-header">
 
-    <%= yield %>
+	  		<ul class="nav nav-pills pull-right">
+	  			<li>
+	    			<%= link_to "Home", "/" %>
+	  			</li>
+	  			<li>
+	   		 		<%= link_to "About", "/about" %>
+	  			</li>
+				</ul>
+
+				<h1>
+  				<%= link_to "Lili in the net", "/" %>
+  				<small> // hello everyone!</small>
+  			</h1>
+
+			</div>
+
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<%= yield %>
+				</div>
+			</div>
+		</div>
   </body>
 
 </html>
