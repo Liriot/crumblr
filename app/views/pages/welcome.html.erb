@@ -1,9 +1,5 @@
-<h1>Welcome</h1>
+<% @posts.each do |post| %>
+	<%= render 'posts/post', post: post %>
 
-<p>
-	This is the first step into my new life full of creation
-</p>
-
-<p>
-This page is made using Ruby on Rails!
-</p>
+	<br><br><br><br>	
+<% end %>

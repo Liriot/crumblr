@@ -40,10 +40,8 @@ class PostsController < ApplicationController
 
   # DELETE /posts/1
   def destroy
-    redirect_to @post, confirm: 'Are you sure?'
-    if @post.destroy
-      redirect_to posts_url
-    end
+    @post.destroy
+    redirect_to posts_url
   end
 
   private
